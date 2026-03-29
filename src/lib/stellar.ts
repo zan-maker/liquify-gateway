@@ -17,10 +17,7 @@ export { NETWORK_PASSPHRASE, HORIZON_URL, SOROBAN_RPC_URL };
 /**
  * Fetch the latest ledger sequence from the Stellar mainnet.
  */
-export async function getLatestLedger(): Promise<{
-  sequence: number;
-  protocolVersion: number;
-}> {
+export async function getLatestLedger() {
   const result = await sorobanRpc.getLatestLedger();
   return {
     sequence: result.sequence,
