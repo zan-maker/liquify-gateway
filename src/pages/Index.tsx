@@ -1,16 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import DashboardHeader from "@/components/DashboardHeader";
+import StatsGrid from "@/components/StatsGrid";
+import SupplyChainFlow from "@/components/SupplyChainFlow";
+import CompliancePanel from "@/components/CompliancePanel";
+import EntityRegistry from "@/components/EntityRegistry";
+import RecentEvents from "@/components/RecentEvents";
+import StellarNetworkStatus from "@/components/StellarNetworkStatus";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      <DashboardHeader />
+
+      <main className="container px-6 py-6 space-y-6">
+        <StellarNetworkStatus />
+        <StatsGrid />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <SupplyChainFlow />
+          <CompliancePanel />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <RecentEvents />
+          <EntityRegistry />
+        </div>
+      </main>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
