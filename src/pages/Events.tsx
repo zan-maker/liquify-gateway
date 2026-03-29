@@ -135,7 +135,7 @@ const Events = () => (
       <TabsContent value="live">
         <div className="rounded-lg border border-border bg-card p-6 space-y-3">
           <div className="flex items-center gap-2 mb-2">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs text-muted-foreground">Listening to Soroban contract events on Mainnet</span>
           </div>
           {events.slice(0, 5).map((e, i) => (
