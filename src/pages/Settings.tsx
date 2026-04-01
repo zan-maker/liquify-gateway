@@ -7,7 +7,7 @@ const Settings = () => (
       <h1 className="text-xl font-semibold text-foreground">Settings</h1>
     </div>
     <p className="text-sm text-muted-foreground">
-      Network configuration, contract addresses, and preferences.
+      Network configuration, API endpoints, and wallet preferences.
     </p>
     <div className="rounded-lg border border-border bg-card p-8 text-center text-muted-foreground text-sm">
       Settings interface coming soon.

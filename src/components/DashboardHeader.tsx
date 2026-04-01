@@ -1,4 +1,4 @@
-import { Shield, Bell, Search } from "lucide-react";
+import { Droplets, Bell, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DashboardHeader = () => {
@@ -7,17 +7,17 @@ const DashboardHeader = () => {
       <div className="container flex items-center justify-between h-16 px-6">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center glow-border">
-            <Shield className="w-4 h-4 text-primary" />
+            <Droplets className="w-4 h-4 text-primary" />
           </div>
           <div>
             <h1 className="text-sm font-semibold tracking-tight text-foreground">
-              Mineral Gateway
+              Liquify Gateway
             </h1>
             <p className="text-xs text-muted-foreground font-mono">
-              Stellar · Soroban
+              BNB Chain · Liquify
             </p>
           </div>
-          <Badge variant="stellar" className="ml-2 text-[10px]">TESTNET</Badge>
+          <Badge variant="liquify" className="ml-2 text-[10px]">MAINNET</Badge>
         </div>
 
         <div className="flex items-center gap-2">
@@ -25,7 +25,7 @@ const DashboardHeader = () => {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search assets, entities..."
+              placeholder="Search validators, positions..."
               className="h-8 w-64 rounded-md bg-secondary border border-border pl-9 pr-3 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary/50"
             />
           </div>

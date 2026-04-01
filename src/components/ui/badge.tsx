@@ -15,7 +15,7 @@ const badgeVariants = cva(
         compliant: "border border-success/30 bg-success/15 text-success",
         review: "border border-warning/30 bg-warning/15 text-warning",
         nonCompliant: "border border-destructive/30 bg-destructive/15 text-destructive",
-        stellar: "border border-primary/30 bg-primary/15 text-primary",
+        liquify: "border border-primary/30 bg-primary/15 text-primary",
       },
     },
     defaultVariants: {

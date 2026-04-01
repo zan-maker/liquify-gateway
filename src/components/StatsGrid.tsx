@@ -1,32 +1,32 @@
-import { Package, Building2, ShieldCheck, Activity } from "lucide-react";
+import { Droplets, Users, TrendingUp, Server } from "lucide-react";
 
 const stats = [
   {
-    label: "Tracked Assets",
-    value: "12,847",
-    change: "+342 this week",
-    icon: Package,
+    label: "Total Value Locked",
+    value: "2,156,000",
+    change: "+180,000 this week",
+    icon: Droplets,
     trend: "up" as const,
   },
   {
-    label: "Registered Entities",
-    value: "156",
-    change: "+8 this month",
-    icon: Building2,
+    label: "Active Stakers",
+    value: "84,620",
+    change: "+2,340 this month",
+    icon: Users,
     trend: "up" as const,
   },
   {
-    label: "Compliance Rate",
-    value: "94.2%",
-    change: "+1.3% vs last month",
-    icon: ShieldCheck,
+    label: "Network APR",
+    value: "5.12%",
+    change: "+0.08% vs last epoch",
+    icon: TrendingUp,
     trend: "up" as const,
   },
   {
-    label: "On-Chain Events",
-    value: "1.2M",
-    change: "~3,400/day avg",
-    icon: Activity,
+    label: "Active Validators",
+    value: "41/42",
+    change: "1 jailed",
+    icon: Server,
     trend: "neutral" as const,
   },
 ];

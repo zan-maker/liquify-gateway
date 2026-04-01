@@ -1,40 +1,32 @@
-import { Wifi, WifiOff, Clock, Database, Zap, Loader2 } from "lucide-react";
-import { useStellarLedger } from "@/hooks/useStellarNetwork";
+import { Wifi, WifiOff, Clock, Blocks, Zap, Loader2 } from "lucide-react";
+import { useLiquifyMetrics } from "@/hooks/useLiquifyNetwork";
 
-const StellarNetworkStatus = () => {
-  const { data, isLoading, isError } = useStellarLedger();
+const NetworkStatus = () => {
+  const { data, isLoading, isError } = useLiquifyMetrics();
 
   const metrics = [
     {
       icon: isError ? WifiOff : Wifi,
       label: "Network",
-      value: isLoading ? "Connecting…" : isError ? "Disconnected" : "Mainnet",
+      value: isLoading ? "Connecting…" : isError ? "Disconnected" : "BNB Mainnet",
       color: isError ? "text-destructive" : "text-success",
     },
     {
       icon: Clock,
-      label: "Avg Finality",
-      value: "~5s",
+      label: "Block Time",
+      value: "~3s",
       color: "text-primary",
     },
     {
-      icon: Database,
-      label: "Ledger",
-      value: isLoading
-        ? "Loading…"
-        : data
-        ? `#${data.sequence.toLocaleString()}`
-        : "—",
+      icon: Blocks,
+      label: "Block Height",
+      value: isLoading ? "Loading…" : data ? `#${data.blockHeight.toLocaleString()}` : "—",
       color: "text-foreground",
     },
     {
       icon: Zap,
-      label: "Protocol",
-      value: isLoading
-        ? "…"
-        : data
-        ? `v${data.protocolVersion}`
-        : "—",
+      label: "Bond Rate",
+      value: isLoading ? "…" : data ? `${data.networkBondRate}%` : "—",
       color: "text-accent",
     },
   ];
@@ -42,7 +34,7 @@ const StellarNetworkStatus = () => {
   return (
     <div className="glass-panel p-4">
       <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-        Stellar Network
+        BNB Chain Network
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {metrics.map((m) => (
@@ -65,4 +57,4 @@ const StellarNetworkStatus = () => {
   );
 };
 
-export default StellarNetworkStatus;
+export default NetworkStatus;

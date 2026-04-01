@@ -1,11 +1,11 @@
 import {
   LayoutDashboard,
   Gem,
-  Building2,
+  Server,
   ShieldCheck,
   Activity,
   Settings,
-  Network,
+  Route,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -22,18 +22,18 @@ import {
   SidebarFooter,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Shield } from "lucide-react";
+import { Droplets } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const mainItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Assets", url: "/assets", icon: Gem },
-  { title: "Entities", url: "/entities", icon: Building2 },
-  { title: "Supply Chain", url: "/supply-chain", icon: Network },
+  { title: "Validators", url: "/entities", icon: Server },
+  { title: "Yield Provenance", url: "/supply-chain", icon: Route },
 ];
 
 const operationsItems = [
-  { title: "Compliance", url: "/compliance", icon: ShieldCheck },
+  { title: "Risk & Compliance", url: "/compliance", icon: ShieldCheck },
   { title: "Events", url: "/events", icon: Activity },
 ];
 
@@ -52,16 +52,16 @@ export function AppSidebar() {
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center shrink-0">
-            <Shield className="w-4 h-4 text-primary" />
+            <Droplets className="w-4 h-4 text-primary" />
           </div>
           {!collapsed && (
             <div className="overflow-hidden">
               <h1 className="text-sm font-semibold tracking-tight text-foreground truncate">
-                Mineral Gateway
+                Liquify Gateway
               </h1>
               <div className="flex items-center gap-1.5">
-                <p className="text-[10px] text-muted-foreground font-mono">Stellar · Soroban</p>
-                <Badge variant="stellar" className="text-[9px] px-1 py-0">TESTNET</Badge>
+                <p className="text-[10px] text-muted-foreground font-mono">BNB Chain · Liquify</p>
+                <Badge variant="liquify" className="text-[9px] px-1 py-0">MAINNET</Badge>
               </div>
             </div>
           )}
