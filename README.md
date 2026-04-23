@@ -1,5 +1,11 @@
 # Mineral Gateway
 
+
+## Demo
+
+https://github.com/user-attachments/assets/demo.mp4
+
+> _Generated with [demo-video-generator](https://github.com/zan-maker/demo-video-generator)_
 Stellar/Soroban-based critical minerals tracking and domestic-content attestation platform for US defense and industrial policy compliance.
 
 ## Architecture
